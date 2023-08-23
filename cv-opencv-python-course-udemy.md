@@ -7,38 +7,40 @@ Udemy Computer Vision with OpenCV and Python Free Course By OpenCV Team.
 ## Course Contents
 
 ```
-- Module 1: Getting Started with Images
-- Module 2: Basic Image Manipulation
-- Module 3: Image Annotation
-- Module 4: Arithmetic Operations on Images
-- Module 5: Bitwise Operations on Images
-- Module 6: Accessing the Camera
-- Module 7: Read and Write Videos
-- Module 8: Image Filtering and Edge Detection
-- Module 9: Image Features and Image Alignment
-- Module 10: Image Stitching and Creating Panoramas 
-- Module 11: Object Tracking in OpenCV
-- Module 12: Face Detection using Deep Learning
-- Module 13: Object Detection using Deep Learning
-- Module 14: Pose Estimation using OpenPose
+- Section 1: Introduction
+- Section 2: Getting Started with Images
+- Section 3: Basic Image Manipulation
+- Section 4: Image Annotation
+- Section 5: Arithmetic Operations on Images
+- Section 6: Bitwise Operations on Images
+- Section 7: Accessing the Camera
+- Section 8: Read and Write Videos
+- Section 9: Image Filtering and Edge Detection
+- Section 10: Image Features and Image Alignment
+- Section 11: Image Stitching and Creating Panoramas 
+- Section 12: Object Tracking in OpenCV
+- Section 13: Face Detection using Deep Learning
+- Section 14: Object Detection using Deep Learning
+- Section 15: Pose Estimation using OpenPose
 ```
 
 ## Course Notebooks
 
-- [Module 1: Getting Started with Images](https://colab.research.google.com/drive/1dPLMM7aa7QNm-xZXzg1enDdX2MfwP2Lz)
-- [Module 2: Basic Image Manipulation](#)
-- [Module 3: Image Annotation](#)
-- [Module 4: Arithmetic Operations on Images](#)
-- [Module 5: Bitwise Operations on Images](#)
-- [Module 6: Accessing the Camera](#)
-- [Module 7: Read and Write Videos](#)
-- [Module 8: Image Filtering and Edge Detection](#)
-- [Module 9: Image Features and Image Alignment](#)
-- [Module 10: Image Stitching and Creating Panoramas](#) 
-- [Module 11: Object Tracking in OpenCV](#)
-- [Module 12: Face Detection using Deep Learning](#)
-- [Module 13: Object Detection using Deep Learning](#)
-- [Module 14: Pose Estimation using OpenPose](#)
+- [Section 1: Introduction](#)
+- [Section 2: Getting Started with Images](https://colab.research.google.com/drive/1dPLMM7aa7QNm-xZXzg1enDdX2MfwP2Lz)
+- [Section 3: Basic Image Manipulation](#)
+- [Section 4: Image Annotation](#)
+- [Section 5: Arithmetic Operations on Images](#)
+- [Section 6: Bitwise Operations on Images](#)
+- [Section 7: Accessing the Camera](#)
+- [Section 8: Read and Write Videos](#)
+- [Section 9: Image Filtering and Edge Detection](#)
+- [Section 10: Image Features and Image Alignment](#)
+- [Section 11: Image Stitching and Creating Panoramas](#) 
+- [Section 12: Object Tracking in OpenCV](#)
+- [Section 13: Face Detection using Deep Learning](#)
+- [Section 14: Object Detection using Deep Learning](#)
+- [Section 15: Pose Estimation using OpenPose](#)
   
 ## References
 
