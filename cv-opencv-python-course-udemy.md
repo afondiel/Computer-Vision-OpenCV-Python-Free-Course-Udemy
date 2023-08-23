@@ -1,4 +1,4 @@
-# Computer Vision Free Course from OpenCV Team 
+# Computer Vision OpenCV Python Free Online Course - OpenCV Team 
 
 ## Overview
 
@@ -42,8 +42,14 @@ Udemy Computer Vision with OpenCV and Python Free Course By OpenCV Team.
   
 ## References
 
-- [Computer Vision with OpenCV Python Course](https://www.udemy.com/course/computer-vision-with-opencv-official-opencv-free-course/learn/lecture/27025878#overview)
+- [Computer Vision with OpenCV Python Course OpenCV Team](https://www.udemy.com/course/computer-vision-with-opencv-official-opencv-free-course/learn/lecture/27025878#overview)
+- [3H YT version - OpenCV Python Course - Learn Computer Vision and AI](https://www.youtube.com/watch?v=P4Z8_qe2Cu0)
+- [OpenCV Course - Full Tutorial with Python](https://www.youtube.com/watch?v=oXlwWbU8l2o&t=63s)
 - [Opencv Resources & Documentation](https://opencv.org/)
+- [Open Source Computer Vision - opencv doc](https://docs.opencv.org/4.0.0/index.html)
+- [Computer Vision Datasets](https://public.roboflow.com/)
+- [15 Best Open-Source Autonomous Driving Datasets](https://medium.com/analytics-vidhya/15-best-open-source-autonomous-driving-datasets-34324676c8d7)
 
+Books
 
-
+- [Computer Vision - Resources](https://github.com/afondiel/cs-books/tree/main/computer-vision)
