@@ -44,13 +44,17 @@ source = cv2.VideoCapture(s)
 win_name = 'Camera Preview'
 cv2.namedWindow(win_name, cv2.WINDOW_NORMAL)
 
-net = cv2.dnn.readNetFromCaffe("deploy.prototxt",
-                               "res10_300x300_ssd_iter_140000_fp16.caffemodel")
+#/!\ opencv deep neural net api for reading pre-trained models such as: caffe, tensorflow pytorch, darknet, onnx...
+
+# create Caffe DNN object with pre-trained model, some defaults parameters 
+## more details can be found: https://github.com/opencv/opencv/tree/4.x/samples/dnn
+net = cv2.dnn.readNetFromCaffe("deploy.prototxt", "res10_300x300_ssd_iter_140000_fp16.caffemodel")
+
 # Model parameters
 in_width = 300
 in_height = 300
-mean = [104, 117, 123]
-conf_threshold = 0.7
+mean = [104, 117, 123] 
+conf_threshold = 0.7 # sensivility of the detections
 
 while cv2.waitKey(1) != 27:
     has_frame, frame = source.read()
@@ -61,14 +65,31 @@ while cv2.waitKey(1) != 27:
     frame_width = frame.shape[1]
 
     # Create a 4D blob from a frame.
+    """
+    @brief Preprocessing of the image to put in the right format
+    
+    - frame: image frame from video stream
+    - 1.0 : rescaled the img based on the model range
+    - (in_width, in_height): input size 
+    - mean: mean value subtracted from all the images 
+    - swapRB = False : opencv & caffe use the same convention for channel camera 
+    - crop = False: resize the image
+    """
     blob = cv2.dnn.blobFromImage(frame, 1.0, (in_width, in_height), mean, swapRB = False, crop = False)
     # Run a model
     net.setInput(blob)
+    # model inference => replay result scoring and prediction
     detections = net.forward()
-
+    ## Debugging
+    # Detections:[i,j,k,l] => k: numbers of row, l:number of columns 
+    # print(f'detections: {detections}, detections-shape: {detections.shape}')
+    # print(f'detections-size: {detections.size}, detections-ndim: {detections.ndim}')
+    # break
+    
     for i in range(detections.shape[2]):
         confidence = detections[0, 0, i, 2]
         if confidence > conf_threshold:
+            # drawing a box
             x_left_bottom = int(detections[0, 0, i, 3] * frame_width)
             y_left_bottom = int(detections[0, 0, i, 4] * frame_height)
             x_right_top = int(detections[0, 0, i, 5] * frame_width)
@@ -84,6 +105,7 @@ while cv2.waitKey(1) != 27:
             cv2.putText(frame, label, (x_left_bottom, y_left_bottom),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0))
 
+    # time required to perform inference
     t, _ = net.getPerfProfile()
     label = 'Inference time: %.2f ms' % (t * 1000.0 / cv2.getTickFrequency())
     cv2.putText(frame, label, (0, 15), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0))

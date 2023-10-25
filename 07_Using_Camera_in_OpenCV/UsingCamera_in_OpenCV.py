@@ -35,19 +35,42 @@
 import cv2
 import sys
 
+# Source of video stream: System Default Camera Device 
 s = 0
+# We can choose a specific source directly from the command line
 if len(sys.argv) > 1:
     s = sys.argv[1]
 
+# Create video capture object
 source = cv2.VideoCapture(s)
 
 win_name = 'Camera Preview'
 cv2.namedWindow(win_name, cv2.WINDOW_NORMAL)
 
+## Quick fun to save the video
+
+# set resolution using property id
+frame_width = int(source.get(cv2.CAP_PROP_FRAME_WIDTH)) # 3
+frame_height = int(source.get(cv2.CAP_PROP_FRAME_HEIGHT)) # 4
+   
+size = (frame_width, frame_height)
+
+# print("size: ", size)
+# exit("exit the program")
+
+video_file_name = 'quickfun.avi'
+result = cv2.VideoWriter(video_file_name, 
+                         cv2.VideoWriter_fourcc(*'MJPG'),
+                         10, size)
+
+
 while cv2.waitKey(1) != 27: # Escape
     has_frame, frame = source.read()
     if not has_frame:
         break
+    # save the video
+    result.write(frame)
+    
     cv2.imshow(win_name, frame)
 
 source.release()
